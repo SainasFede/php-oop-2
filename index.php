@@ -12,6 +12,8 @@ $products = [
     new Toy(new Category('Cat', '<i class="fa-solid fa-shield-cat"></i>'), 'SlimCat', 'Croci', 7, 'https://arcaplanet.vtexassets.com/arquivos/ids/258029/GIOCO-GATTO-SLIMCAT-BLU.jpg?v=1757207624', 0.150, 'circle'),
 
     new Clean(new Category('Cat', '<i class="fa-solid fa-shield-cat"></i>'), 'TripocanClean', 'TropiClean', 13, 'https://arcaplanet.vtexassets.com/arquivos/ids/273387/TROPICLEAN-WATERLESS-CAT-SHAMPOO-ML.220.jpg?v=1756084205', 'Shampoo'),
+
+    new Food(new Category('Dog', '<i class="fa-solid fa-shield-dog"></i>'), 'All Breeds', 'Monge', 46, null, 12, 'Humid'),
 ];
 
 
@@ -32,6 +34,26 @@ $products = [
   <title>Product</title>
 </head>
 <body>
-  
+  <header class="bg-primary p-5 text-white text-center">
+    <h1>Animals Shop</h1>
+  </header>
+
+  <main class="w-100">
+    <div class="container">
+      <div class="row my-5">
+        <?php foreach($products as $product):?>
+        <div class="card" style="width: 18rem;">
+          <h4 class="card-title"><?php echo $product->category->target ?><span><?php echo $product->category->icon ?></span></h4>
+          <img src="<?php echo $product->poster?>" class="card-img-top" alt="">
+        <div class="card-body">
+          <h4 class="card-title"><?php echo $product->name ?></h4>
+          <h6 class="card-title"><?php echo $product->brand ?></h6>
+          <h6 class="card-title">&euro;<?php echo $product->price ?></h6>
+        </div>
+        </div>
+        <?php endforeach;?>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
