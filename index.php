@@ -6,9 +6,16 @@ require_once __DIR__ . '/models/Food.php';
 require_once __DIR__ . '/models/Toy.php';
 require_once __DIR__ . '/models/Clean.php';
 
-$products = [
-  new Food(new Category('Dog', '<i class="fa-solid fa-shield-dog"></i>'), 'All Breeds', 'Monge', 46, 'https://arcaplanet.vtexassets.com/arquivos/ids/270797/Monge-All-Breeds-Adult-Salmone-e-Riso-12Kg.jpg?v=1757252124', 12, 'Dry');
-];
+
+  $allBreeds = new Food(new Category('Dog', '<i class="fa-solid fa-shield-dog"></i>'), 'All Breeds', 'Monge', 46, 'https://arcaplanet.vtexassets.com/arquivos/ids/270797/Monge-All-Breeds-Adult-Salmone-e-Riso-12Kg.jpg?v=1757252124', 12, 'Dry');
+  var_dump($allBreeds);
+
+  $slimCat = new Toy(new Category('Cat', '<i class="fa-solid fa-shield-cat"></i>'), 'SlimCat', 'Croci', 7, 'https://arcaplanet.vtexassets.com/arquivos/ids/258029/GIOCO-GATTO-SLIMCAT-BLU.jpg?v=1757207624', 0.150, 'circle');
+  var_dump($slimCat);
+
+  $tropiClean = new Clean(new Category('Cat', '<i class="fa-solid fa-shield-cat"></i>'), 'TripocanClean', 'TropiClean', 13, 'https://arcaplanet.vtexassets.com/arquivos/ids/273387/TROPICLEAN-WATERLESS-CAT-SHAMPOO-ML.220.jpg?v=1756084205', 'Shampoo');
+  var_dump($tropiClean);
+
 
 
 ?>
