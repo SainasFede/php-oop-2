@@ -44,11 +44,13 @@ $products = [
         <?php foreach($products as $product):?>
         <div class="card" style="width: 18rem;">
           <h4 class="card-title"><?php echo $product->category->target ?><span><?php echo $product->category->icon ?></span></h4>
-          <img src="<?php echo $product->poster?>" class="card-img-top" alt="">
+          <img src="<?php echo $product->getImg()?>" class="card-img-top" alt="">
         <div class="card-body">
           <h4 class="card-title"><?php echo $product->name ?></h4>
           <h6 class="card-title"><?php echo $product->brand ?></h6>
           <h6 class="card-title">&euro;<?php echo $product->price ?></h6>
+          <h6>Tipologia: <?php echo $product->type?></h6>
+          <h6>Peso: <?php echo $product->weight?></h6>
         </div>
         </div>
         <?php endforeach;?>

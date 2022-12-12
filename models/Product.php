@@ -16,6 +16,10 @@ class Product
     $this->price = $_price;
     $this->poster = $_poster;
   }
+
+  public function getImg(){
+    return $this->poster ?? 'https://dunlite.com.au/wp-content/uploads/2019/04/placeholder.jpg';
+  }
 }
 
 ?>
