@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #73ba9b;
+}
+
+header{
+  background-color: #003e1f;
+}
+
+.card{
+  background-color: #d5f2e3;
+}
